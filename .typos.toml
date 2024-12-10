@@ -1,0 +1,8 @@
+[default]
+
+[default.extend-identifiers]
+
+[default.extend-words]
+
+[files]
+extend-exclude = ["priv/**"]
