@@ -61,7 +61,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: reviewdog/action-actionlint@50b75b9513baa71e6a1899a1ebaa9ac9851cf16c # v1.66.0
+      - uses: reviewdog/action-actionlint@f00ad0691526c10be4021a91b2510f0a769b14d0 # v1.68.0
 
   credo:
     if: ${{ github.event.action != 'closed' }}
