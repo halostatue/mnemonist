@@ -1,8 +1,7 @@
 defmodule Mnemonist.Wordlist do
   @moduledoc false
 
-  @word_to_index Mnemonist.__supported_languages()
-                 |> Map.new(fn language ->
+  @word_to_index Map.new(Mnemonist.__supported_languages(), fn language ->
                    words =
                      :mnemonist
                      |> :code.priv_dir()

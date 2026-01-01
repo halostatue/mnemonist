@@ -775,7 +775,8 @@ defmodule Mnemonist do
     # ent = <<entropy::size(divider_index)>>
 
     ent =
-      bit_size(checksummed_entropy)
+      checksummed_entropy
+      |> bit_size()
       |> Kernel.*(32)
       |> div(33)
 
