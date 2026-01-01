@@ -45,6 +45,6 @@ Documentation, including usage, is found on [HexDocs][docs].
 [bip39]: https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
 [docs]: https://hexdocs.pm/mnemonist
 [lc-mnemonic]: https://github.com/LanfordCai/mnemonic
-[semver]: http://semver.org/
+[semver]: https://semver.org/
 [trezor-test-vectors]: https://github.com/trezor/python-mnemonic/blob/master/vectors.json
 [wiktionary]: https://en.wiktionary.org/wiki/mnemonist
