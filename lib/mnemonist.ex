@@ -265,16 +265,14 @@ defmodule Mnemonist do
           {:ok, String.t()} | {:error, String.t()}
   def generate_mnemonic(strength \\ @default_entropy_length, language \\ @default_language)
 
-  def generate_mnemonic(strength, language)
-      when is_valid_entropy_bits(strength) and is_supported_language(language) do
+  def generate_mnemonic(strength, language) when is_valid_entropy_bits(strength) and is_supported_language(language) do
     strength
     |> div(8)
     |> :crypto.strong_rand_bytes()
     |> mnemonic_from_entropy(language)
   end
 
-  def generate_mnemonic(count, language)
-      when is_valid_mnemonic_length(count) and is_supported_language(language) do
+  def generate_mnemonic(count, language) when is_valid_mnemonic_length(count) and is_supported_language(language) do
     generate_mnemonic(@word_numbers_to_entropy_bits[count], language)
   end
 
@@ -342,8 +340,7 @@ defmodule Mnemonist do
   @spec mnemonic_from_entropy(binary(), language()) :: {:ok, String.t()} | {:error, term()}
   def mnemonic_from_entropy(entropy, language \\ @default_language)
 
-  def mnemonic_from_entropy(entropy, language)
-      when is_valid_entropy(entropy) and is_supported_language(language) do
+  def mnemonic_from_entropy(entropy, language) when is_valid_entropy(entropy) and is_supported_language(language) do
     entropy
     |> append_checksum()
     |> do_generate_mnemonic(language)
@@ -501,8 +498,7 @@ defmodule Mnemonist do
           {:ok, binary()} | {:error, term()}
   def mnemonic_to_entropy(mnemonic, language \\ @default_language)
 
-  def mnemonic_to_entropy(mnemonic, language)
-      when is_binary(mnemonic) and is_supported_language(language) do
+  def mnemonic_to_entropy(mnemonic, language) when is_binary(mnemonic) and is_supported_language(language) do
     mnemonic
     |> mnemonic_to_words()
     |> words_to_checksummed_entropy(language)
@@ -727,8 +723,7 @@ defmodule Mnemonist do
 
   defp do_split_to_group(<<>>, groups), do: groups
 
-  defp do_split_to_group(<<group::11, rest::bitstring>>, groups),
-    do: do_split_to_group(rest, groups ++ [group])
+  defp do_split_to_group(<<group::11, rest::bitstring>>, groups), do: do_split_to_group(rest, groups ++ [group])
 
   defp mnemonic_to_words(mnemonic) do
     words =
@@ -809,8 +804,7 @@ defmodule Mnemonist do
   defp normalize_nkfd(string), do: :unicode.characters_to_nfkd_binary(string)
 
   defp invalid_language(language) do
-    {:error,
-     "Invalid mnemonic language #{inspect(language)}, must be one of: #{inspect(__supported_languages())}"}
+    {:error, "Invalid mnemonic language #{inspect(language)}, must be one of: #{inspect(__supported_languages())}"}
   end
 
   defp invalid_strength(strength) do
@@ -826,8 +820,7 @@ defmodule Mnemonist do
   end
 
   defp invalid_entropy_language(entropy, language) do
-    {:error,
-     "Invalid entropy value with #{bit_size(entropy)} bits and language #{inspect(language)}."}
+    {:error, "Invalid entropy value with #{bit_size(entropy)} bits and language #{inspect(language)}."}
   end
 
   defp invalid_mnemonic_words(count) do

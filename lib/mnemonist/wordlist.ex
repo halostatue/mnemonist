@@ -77,8 +77,7 @@ defmodule Mnemonist.Wordlist do
 
   defp invalid_language(language), do: "Invalid mnemonic language #{inspect(language)}."
 
-  defp invalid_word(word, language),
-    do: "Invalid mnemonic word (#{inspect(word)}) for language #{inspect(language)}."
+  defp invalid_word(word, language), do: "Invalid mnemonic word (#{inspect(word)}) for language #{inspect(language)}."
 
   defp invalid_index(index, language),
     do: "Invalid mnemonic index (#{inspect(index)}) for language #{inspect(language)}."

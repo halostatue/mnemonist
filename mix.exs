@@ -18,11 +18,6 @@ defmodule Mnemonist.MixProject do
       deps: deps(),
       package: package(),
       docs: docs(),
-      preferred_cli_env: [
-        coveralls: :test,
-        "coveralls.github": :test,
-        "coveralls.html": :test
-      ],
       test_coverage: test_coverage(),
       elixirc_paths: elixirc_paths(Mix.env()),
       dialyzer: [
@@ -35,6 +30,16 @@ defmodule Mnemonist.MixProject do
 
   def application do
     [extra_applications: [:logger, :crypto]]
+  end
+
+  def cli do
+    [
+      preferred_envs: [
+        coveralls: :test,
+        "coveralls.github": :test,
+        "coveralls.html": :test
+      ]
+    ]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
