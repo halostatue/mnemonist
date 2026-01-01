@@ -5,6 +5,6 @@ defmodule MnemonistError do
 
   defexception [:message]
 
-  @impl true
+  @impl Exception
   def message(%{message: message}), do: message
 end
