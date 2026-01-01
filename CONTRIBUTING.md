@@ -23,7 +23,7 @@ I have several guidelines to contributing code through pull requests:
 - Proposed changes should be on a thoughtfully-named topic branch and organized
   into logical commit chunks as appropriate.
 
-- Use [Conventional Commits][conventional] with our
+- Use [Conventional Commits][conventional] with my
   [conventions](#commit-conventions).
 
 - Versions must not be updated in pull requests.
@@ -38,21 +38,16 @@ I have several guidelines to contributing code through pull requests:
 - All GitHub Actions checks marked as required must pass before a pull request
   may be accepted and merged.
 
-## LLM-Generated Contribution Policy
+## AI Contribution Policy
 
-Mnemonist contributions must be well understood by the submitter and that,
-especially for pull requests, the developer can attest to the
-[Developer Certificate of Origin][dco] for each pull request (see
-[LICENCE](LICENCE.md)).
+Mnemonist contributions must be well understood by the submitter and that the
+developer can attest to the [Developer Certificate of Origin][dco] for each pull
+request (see [LICENCE](LICENCE.md)).
 
-If LLM assistance is used in writing pull requests, this must be documented in
-the commit message and pull request. If there is evidence of LLM assistance
-without such declaration, the pull request **will be declined**.
+Any contribution (bug, feature request, or pull request) that uses undeclared AI
+output will be rejected.
 
-Any contribution (bug, feature request, or pull request) that uses unreviewed
-LLM output will be rejected.
-
-### Commit Conventions
+## Commit Conventions
 
 Mnemonist has adopted a variation of the Conventional Commits format for commit
 messages. The following types are permitted:
@@ -100,6 +95,6 @@ Austin Ziegler created Mnemonist.
 [exunit]: https://hexdocs.pm/ex_unit/ExUnit.html
 [issues]: https://github.com/halostatue/mnemonist/issues
 [quokka]: https://github.com/emkguts/quokka
-[tpope-qcm]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[tpope-qcm]: https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [trailers1]: https://git-scm.com/docs/git-interpret-trailers
 [trailers2]: https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---trailerlttokengtltvaluegt
