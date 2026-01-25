@@ -3,7 +3,7 @@ defmodule Mnemonist.MixProject do
 
   @app :mnemonist
   @project_url "https://github.com/halostatue/mnemonist"
-  @version "1.0.0"
+  @version "1.0.1"
 
   def project do
     [
@@ -59,6 +59,7 @@ defmodule Mnemonist.MixProject do
 
   defp deps do
     [
+      {:castore, "~> 1.0", optional: true},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.29", only: [:dev, :test], runtime: false},
@@ -83,7 +84,8 @@ defmodule Mnemonist.MixProject do
         ],
         "licences/MIT.txt": [filename: "MIT.txt", title: "MIT License"],
         "licences/dco.txt": [filename: "dco.txt", title: "Developer Certificate of Origin"],
-        "SECURITY.md": [filename: "SECURITY.md", title: "Security"]
+        "SECURITY.md": [filename: "SECURITY.md", title: "Security"],
+        "usage-rules.md": [filename: "usage-rules.md", title: "Agent Usage Rules"]
       ],
       source_ref: "v#{@version}",
       source_url: @project_url,

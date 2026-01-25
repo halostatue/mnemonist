@@ -33,7 +33,7 @@ Mnemonist can be installed by adding `mnemonist` to your list of dependencies in
 ```elixir
 def deps do
   [
-    {:mnemonist, "~> 1.3"}
+    {:mnemonist, "~> 1.0"}
   ]
 end
 ```
