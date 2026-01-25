@@ -1,4 +1,5 @@
 [default]
+extend-ignore-re = ['caf\\u00[eE]9']
 
 [default.extend-identifiers]
 
