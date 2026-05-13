@@ -21,9 +21,9 @@ defmodule Mnemonist.MixProject do
       test_coverage: test_coverage(),
       elixirc_paths: elixirc_paths(Mix.env()),
       dialyzer: [
-        plt_add_apps: [:mix],
-        plt_local_path: "priv/plts/project",
-        plt_core_path: "priv/plts/core"
+        plt_add_apps: [:credo, :mix],
+        plt_local_path: "priv/plts/project.plt",
+        plt_core_path: "priv/plts/core.plt"
       ]
     ]
   end
@@ -60,12 +60,14 @@ defmodule Mnemonist.MixProject do
   defp deps do
     [
       {:castore, "~> 1.0", optional: true},
+      {:jason, "~> 1.0", optional: true},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.29", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.18", only: [:test]},
-      {:jason, "~> 1.0", only: [:dev, :test]},
-      {:quokka, "~> 2.6", only: [:dev, :test], runtime: false}
+      {:mix_audit, "~> 2.1", only: [:dev, :test]},
+      {:quokka, "~> 2.6", only: [:dev, :test], runtime: false},
+      {:sobelow, "~> 0.14", only: [:dev, :test]}
     ]
   end
 
@@ -74,18 +76,15 @@ defmodule Mnemonist.MixProject do
       main: "Mnemonist",
       extras: [
         "README.md",
-        "CONTRIBUTING.md": [filename: "CONTRIBUTING.md", title: "Contributing"],
-        "CODE_OF_CONDUCT.md": [filename: "CODE_OF_CONDUCT.md", title: "Code of Conduct"],
-        "CHANGELOG.md": [filename: "CHANGELOG.md", title: "CHANGELOG"],
-        "LICENCE.md": [filename: "LICENCE.md", title: "Licence"],
-        "licences/APACHE-2.0.txt": [
-          filename: "APACHE-2.0.txt",
-          title: "Apache License, version 2.0"
-        ],
-        "licences/MIT.txt": [filename: "MIT.txt", title: "MIT License"],
-        "licences/dco.txt": [filename: "dco.txt", title: "Developer Certificate of Origin"],
-        "SECURITY.md": [filename: "SECURITY.md", title: "Security"],
-        "usage-rules.md": [filename: "usage-rules.md", title: "Agent Usage Rules"]
+        "CONTRIBUTING.md": [filename: "CONTRIBUTING", title: "Contributing"],
+        "CODE_OF_CONDUCT.md": [filename: "CODE_OF_CONDUCT", title: "Code of Conduct"],
+        "CHANGELOG.md": [filename: "CHANGELOG", title: "CHANGELOG"],
+        "LICENCE.md": [filename: "LICENCE", title: "Licence"],
+        "licences/APACHE-2.0.txt": [filename: "APACHE-2.0", title: "Apache License, version 2.0"],
+        "licences/MIT.txt": [filename: "MIT", title: "MIT License"],
+        "licences/dco.txt": [filename: "dco", title: "Developer Certificate of Origin"],
+        "SECURITY.md": [filename: "SECURITY", title: "Security"],
+        "usage-rules.md": [filename: "usage-rules", title: "Agent Usage Rules"]
       ],
       source_ref: "v#{@version}",
       source_url: @project_url,

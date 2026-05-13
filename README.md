@@ -1,7 +1,10 @@
 # Mnemonist
 
-[![Hex.pm][shield-hex]][hexpm] [![Hex Docs][shield-docs]][docs]
-[![Apache 2.0][shield-licence]][licence] ![Coveralls][shield-coveralls]
+[![Hex Version](https://img.shields.io/hexpm/v/mnemonist?style=for-the-badge "Hex Version")](https://hex.pm/packages/mdex_custom_heading_id)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg?style=for-the-badge "Hex Docs")](https://hexdocs.pm/mnemonist)
+[![Apache 2.0](https://img.shields.io/hexpm/l/mnemonist?style=for-the-badge&label=licence "Apache 2.0")](https://github.com/halostatue/mdex_custom_heading_id/blob/main/LICENCE.md)
+[![MIT](https://img.shields.io/hexpm/l/mnemonist?style=for-the-badge&label=licence "MIT")](https://github.com/halostatue/mdex_custom_heading_id/blob/main/LICENCE.md)
+![Coverage](https://img.shields.io/coverallsCoverage/github/halostatue/mnemonist?style=for-the-badge "Coverage")
 
 - code :: <https://github.com/halostatue/mnemonist>
 - issues :: <https://github.com/halostatue/mnemonist/issues>
@@ -51,12 +54,6 @@ Documentation, including usage, is found on [HexDocs][docs].
 [lc-mnemonic]: https://github.com/LanfordCai/mnemonic
 [licence]: https://github.com/halostatue/mnemonist/blob/main/LICENCE.md
 [mdex]: https://hex.pm/packages/mdex
-[posts]: https://hexdocs.pm/tableau/Tableau.PostExtension.html
 [semver]: https://semver.org/
-[shield-coveralls]: https://img.shields.io/coverallsCoverage/github/halostatue/mnemonist?style=for-the-badge
-[shield-docs]: https://img.shields.io/badge/hex-docs-lightgreen.svg?style=for-the-badge "Hex Docs"
-[shield-hex]: https://img.shields.io/hexpm/v/mnemonist?style=for-the-badge "Hex Version"
-[shield-licence]: https://img.shields.io/hexpm/l/mnemonist?style=for-the-badge&label=licence "Apache 2.0"
-[tableau]: https://hex.pm/packages/tableau
 [trezor-test-vectors]: https://github.com/trezor/python-mnemonic/blob/master/vectors.json
 [wiktionary]: https://en.wiktionary.org/wiki/mnemonist
