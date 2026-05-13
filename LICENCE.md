@@ -1,6 +1,6 @@
 # Licence
 
-- SPDX-Licence-Identifier: [Apache-2.0][apache-2] OR [MIT][mit].
+<!-- SPDX-License-Identifier: Apache-2.0 -->
 
 Mnemonist is copyright © 2025 Austin Ziegler and is licensed under the
 [Apache License, version 2.0](licences/APACHE-2.0.txt) or the
@@ -13,6 +13,8 @@ but Mnemonist is based on MIT-licensed work by:
 - [Pavol Rusnak and Trezor](https://github.com/trezor/python-mnemonic),
   2013-2025
 - [Jeong Han Seok](https://github.com/rudebono/bip39), 2019
+
+- SPDX Licence: [Apache-2.0][apache-2] OR [MIT][mit]
 
 ## Developer Certificate of Origin
 
@@ -34,5 +36,4 @@ git commit --signoff
 
 [apache-2]: https://spdx.org/licenses/Apache-2.0.html
 [mit]: https://spdx.org/licenses/MIT.html
-[elixir]: https://github.com/elixir-lang/elixir
 [trailer]: https://git-scm.com/docs/git-interpret-trailers
